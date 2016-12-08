@@ -7,7 +7,60 @@
     <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
-    <h2>Headers</h2>
+    <div class="header-container">
+      <div class="header__background"></div>
+      <div class="header__curve"></div>
+      <div class="header__navigation"><a href="#" class="header-nav__logo"></a><a href="#" class="header-nav__menu"><i class="ion-android-menu"></i></a></div>
+      <h1 class="header__heading">Let Us Help Your <br> PC Now!</h1>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.min.js"></script>
+    <div class="section-two">
+      <div class="section-two__container">
+        <div class="section-two__heading"> 
+          <h3>Services</h3>
+        </div>
+        <div class="section-two__services-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide services-container__card diagnostics">
+              <div class="services-container-card__bg img-diagnostics"></div>
+              <div class="services-container-card__text">
+                <h2 class="services-card-text__heading">Diagnostics</h2>
+                <p class="services-card-text__desc">Synth brooklyn viral tofu, chicharrones master cleanse truffaut pickled</p>
+              </div>
+            </div>
+            <div class="swiper-slide services-container__card diagnostics">
+              <div class="services-container-card__bg img-speedup"></div>
+              <div class="services-container-card__text">
+                <h2 class="services-card-text__heading">Speed Up</h2>
+                <p class="services-card-text__desc">Synth brooklyn viral tofu, chicharrones master cleanse truffaut pickled</p>
+              </div>
+            </div>
+            <div class="swiper-slide services-container__card diagnostics">
+              <div class="services-container-card__bg img-diagnostics"></div>
+              <div class="services-container-card__text">
+                <h2 class="services-card-text__heading">Diagnostics</h2>
+                <p class="services-card-text__desc">Synth brooklyn viral tofu, chicharrones master cleanse truffaut pickled</p>
+              </div>
+            </div>
+            <div class="swiper-slide services-container__card diagnostics">
+              <div class="services-container-card__bg img-speedup"></div>
+              <div class="services-container-card__text">
+                <h2 class="services-card-text__heading">Speed Up</h2>
+                <p class="services-card-text__desc">Synth brooklyn viral tofu, chicharrones master cleanse truffaut pickled</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var swiper = new Swiper('.section-two__services-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            grabCursor: true,
+          });
+    </script>
     <h1>Hello PC Help</h1>
     <h6>Footers</h6>
   </body>
