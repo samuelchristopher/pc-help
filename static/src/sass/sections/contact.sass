@@ -1,6 +1,7 @@
 .contact
   margin: 20px
   text-align: center
+  margin-bottom: 100px
 
   +e('heading')
     font-size: 3em
@@ -8,9 +9,16 @@
     font-weight: bold
     margin: 50px
     margin-bottom: 70px
-
+.pushdown-contact
+  height: 550px
 
 // On larger devices
 @media (min-width:1221px)
-  .pushdown
-    height: 472px
+  .pushdown-contact
+    height: 250px
+@media (max-width: 640px)
+  .pushdown-contact
+    height: 400px
+@media (max-width: 443px)
+  .pushdown-contact
+    height: 840px
