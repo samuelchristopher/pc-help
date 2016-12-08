@@ -448,6 +448,28 @@ template {
   display: none;
 }
 
+.button {
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 80px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+  padding: 30px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.button--primary {
+  background: #c82e46;
+  color: white;
+  transition: background 200ms ease-in-out;
+}
+
+.button--primary:hover {
+  background: #af1130;
+}
+
 body, html {
   width: 100vw;
   height: 100vh;
@@ -838,6 +860,9 @@ body {
   .featured-project__desc.small {
     display: none;
   }
+}
+
+@media (min-width: 1225px) {
   .other-projects {
     height: 285px;
   }
@@ -872,6 +897,25 @@ body {
   }
   .project__hover-overlay__fab--open-icon {
     font-size: 60px;
+  }
+}
+
+.contact {
+  margin: 20px;
+  text-align: center;
+}
+
+.contact__heading {
+  font-size: 3em;
+  color: #191840;
+  font-weight: bold;
+  margin: 50px;
+  margin-bottom: 70px;
+}
+
+@media (min-width: 1221px) {
+  .pushdown {
+    height: 472px;
   }
 }
 
