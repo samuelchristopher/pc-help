@@ -5,14 +5,25 @@
   font-weight: bold
   font-size: 36px
   text-align: center
-  padding: 30px
+  padding: 10px 20px
   display: inline-block
   cursor: pointer
 
   +m('primary')
     background: $light-red
     color: white
-    transition: background 200ms ease-in-out
+    padding: 20px 30px
+    transition: transform 200ms ease-in-out
+    will-change: transform
 
     &:hover
-      background: $dark-red
+      transform: scale(1.1)
+  +m('secondary')
+    background: white
+    color: $dark-blue
+    font-size: 2em
+    transition: transform 200ms ease-in-out
+    will-change: transform
+
+    &:hover
+      transform: scale(1.1)

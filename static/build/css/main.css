@@ -455,7 +455,7 @@ template {
   font-weight: bold;
   font-size: 36px;
   text-align: center;
-  padding: 30px;
+  padding: 10px 20px;
   display: inline-block;
   cursor: pointer;
 }
@@ -463,11 +463,33 @@ template {
 .button--primary {
   background: #c82e46;
   color: white;
-  transition: background 200ms ease-in-out;
+  padding: 20px 30px;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  will-change: transform;
 }
 
 .button--primary:hover {
-  background: #af1130;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.button--secondary {
+  background: white;
+  color: #191840;
+  font-size: 2em;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  will-change: transform;
+}
+
+.button--secondary:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 body, html {
@@ -518,6 +540,26 @@ body, html {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.header__contact-button {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header__content-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header-container {
