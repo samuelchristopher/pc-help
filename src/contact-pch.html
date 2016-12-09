@@ -1,0 +1,33 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="contact-pch">
+  <template>
+    <style include="shared-styles">
+      .contact {
+        margin: 20px;
+        text-align: center;
+        margin-bottom: 100px;
+      }
+
+      .contact__heading {
+        font-size: 3em;
+        color: #191840;
+        font-weight: bold;
+        margin: 50px 0 70px 0;
+      }
+
+    </style>
+
+    <div class="contact">
+      <div class="contact__heading">Inquiries?</div>
+      <div class="button button--primary">Contact Us</div>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'contact-pch'
+    });
+  </script>
+</dom-module>
