@@ -1,0 +1,342 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="./my-icons.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="projects-pch">
+  <template>
+    <style include="shared-styles">
+      .projects {
+        width: 100vw;
+        position: relative;
+        margin-top: -15px;
+      }
+
+      .fp {
+        position: relative;
+      }
+
+      .fp__image {
+        width: 100vw;
+        height: 500px;
+        background-image: url("../assets/featured.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .fp__cw {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+
+      .fp__content {
+        width: 90vw;
+        margin: 0 auto;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+      }
+
+      .fp__name {
+        text-transform: capitalize;
+        max-width: 400px;
+        color: white;
+        color: #fefefe;
+        line-height: 1.2;
+        text-align: left;
+        text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+
+      .fp__name h1 {
+        font-size: 48px;
+      }
+
+      .fp__desc {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        max-width: 300px;
+        box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+      }
+
+      .fp__desc__clogo {
+        width: 100%;
+        height: 100px;
+        background-image: url("../assets/companylogo.png");
+        background-size: cover;
+        background-position: -15px center;
+        background-repeat: no-repeat;
+      }
+
+      .fp__desc__text {
+        color: #191840;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .fp__desc__tf {
+        color: #af1130;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .other-projects {
+        width: 100vw;
+        position: relative;
+      }
+
+      .bg {
+        width: 100vw;
+        height: 100%;
+        background: #ebebeb;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .content {
+        width: 100%;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+
+      .project {
+        height: 200px;
+        width: 200px;
+        background: #191840;
+        border-radius: 10px;
+        box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        margin: 10px auto;
+      }
+
+      .project:hover .hover-overlay {
+        opacity: 1;
+      }
+
+      .img {
+        border-radius: 10px;
+        position: absolute;
+        background-size: cover;
+        background-position: center center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .proj-one {
+        background-image: url("../assets/projectone.png");
+      }
+
+      .proj-two {
+        background-image: url("../assets/projecttwo.png");
+      }
+
+      .hover-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        opacity: 0;
+        will-change: opacity;
+        transition: opacity 200ms ease-in-out;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #191840;
+        opacity: 0.5;
+        border-radius: 10px;
+      }
+
+      .fab {
+        height: 100px;
+        width: 100px;
+        background: white;
+        border-radius: 100%;
+        box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+        z-index: 2;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+
+      .fab i {
+        font-size: 50px;
+        color: #c82e46;
+        cursor: pointer;
+      }
+
+      @media (max-width: 650px) {
+      .fp__content {
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-justify-content: space-around;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: 100%;
+      }
+      .fp__name {
+        text-align: center;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+      .fp__name h1 {
+        margin-top: 60px;
+        font-size: 2em;
+      }
+      .fp__desc {
+        max-width: none;
+        width: 100vw;
+        border-radius: 0px;
+      }
+      .fp__desc__text {
+        width: 70%;
+        margin: 0 auto;
+      }
+      .fp__desc__clogo {
+        width: 50%;
+        margin: 0 auto 20px auto;
+      }
+      .content {
+        padding-top: 20px;
+      }
+      }
+      .open-icon {
+        height: 50px;
+        width: 50px;
+        color: #c82e46;
+      }
+
+    </style>
+
+    <div class="projects">
+      <div class="projects__container">
+        <div class="fp">
+          <div class="fp__image"></div>
+          <div class="fp__cw">
+            <div class="fp__content">
+              <div class="fp__name">
+                <h1>apple hardware repair</h1>
+              </div>
+              <div class="fp__desc">
+                <div class="fp__desc__content">
+                  <div class="fp__desc__clogo"></div>
+                  <p class="fp__desc__text">Synth brooklyn viral tofu, chicharrones master cleanse iPhone squid microdosing kogi chia truffaut pickled</p>
+                  <h3 class="fp__desc__tf">3 days</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="other-projects">
+          <div class="bg"></div>
+          <div class="content">
+            <div class="project">
+              <div class="img proj-one"></div>
+              <div class="hover-overlay">
+                <div class="overlay"></div>
+                <div class="fab"><paper-icon-button  class="open-icon" icon="open-in-new"></paper-icon-button></div>
+              </div>
+            </div>
+            <div class="project">
+              <div class="img proj-two"></div>
+              <div class="hover-overlay">
+                <div class="overlay"></div>
+                <div class="fab"><paper-icon-button  class="open-icon" icon="open-in-new"></paper-icon-button></div>
+              </div>
+            </div>
+            <div class="project">
+              <div class="img proj-two"></div>
+              <div class="hover-overlay">
+                <div class="overlay"></div>
+                <div class="fab"><paper-icon-button  class="open-icon" icon="open-in-new"></paper-icon-button></div>
+              </div>
+            </div>
+            <div class="project">
+              <div class="img proj-one"></div>
+              <div class="hover-overlay">
+                <div class="overlay"></div>
+                <div class="fab"><paper-icon-button  class="open-icon" icon="open-in-new"></paper-icon-button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'projects-pch'
+    });
+  </script>
+</dom-module>
