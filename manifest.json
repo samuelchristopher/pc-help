@@ -1,18 +1,18 @@
 {
-  "name": "My App",
-  "short_name": "My App",
+  "name": "PC Help",
+  "short_name": "PC Help",
   "start_url": "/?homescreen=1",
   "display": "standalone",
-  "theme_color": "#3f51b5",
-  "background_color": "#3f51b5",
+  "theme_color": "#af1130",
+  "background_color": "#af1130",
   "icons": [
     {
-      "src": "images/manifest/icon-192x192.png",
+      "src": "assets/pchelplogo.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "images/manifest/icon-512x512.png",
+      "src": "assets/pchelplogo.png",
       "sizes": "512x512",
       "type": "image/png"
     }
