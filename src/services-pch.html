@@ -1,0 +1,192 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="services-pch">
+  <template>
+    <style include="shared-styles">
+      @import url('https://npmcdn.com/flickity@2/dist/flickity.css');
+      .section-two {
+        width: 100vw;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        position: relative;
+      }
+
+      .section-two__container {
+        width: 85vw;
+        height: 475px;
+        max-width: 1600px;
+        background: white;
+        margin-top: 40px;
+        border-radius: 10px;
+        display: inline-block;
+        box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+        z-index: 3;
+      }
+
+      .section-two__heading {
+        color: #191840;
+        text-transform: uppercase;
+        margin: 30px 0 20px 35px;
+      }
+
+      .section-two__services-container {
+        width: 100%;
+        height: 300px;
+        margin: 20px auto;
+        position: absolute;
+        left: 4.8%;
+      }
+
+      .services-container-card__text {
+        z-index: 99;
+      }
+
+      .services-container-card__text {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+      }
+
+      .services-card-text__heading {
+        color: white;
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+
+      .services-card-text__desc {
+        color: #ff8699;
+        font-size: 20px;
+        margin-top: 0;
+      }
+
+      .services-container__card {
+        min-width: 300px;
+        height: 290px;
+        background: #af1130;
+        border-radius: 10px;
+        z-index: 2;
+        position: relative;
+        box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        overflow: hidden;
+        margin-right: 20px;
+      }
+
+      .swiper-slide {
+        width: 300px !important;
+      }
+
+      .services-container-card__bg {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        width: 140%;
+        height: 112%;
+        background-position: center -25px;
+      }
+
+      .img-diagnostics {
+        background-image: url("../assets/one.png");
+      }
+
+      .img-speedup {
+        background-image: url("../assets/two.png");
+      }
+
+      @media (min-width: 801px) {
+        .section-two__services-container {
+          left: 2%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .section-two__container {
+          width: 100vw;
+          border-radius: 0;
+          margin-top: 60px;
+        }
+      }
+
+      .flickity-prev-next-button {
+        display: none;
+      }
+      .flickity-page-dots {
+        display: none;
+      }
+
+      .swiper-wrapper {
+        outline: none;
+      }
+
+    </style>
+
+
+
+    <div class="section-two">
+      <div class="section-two__container">
+        <div class="section-two__heading">
+          <h3>Services</h3>
+        </div>
+        <div class="section-two__services-container" id="servicesContainer">
+          <div class="swiper-wrapper" id="container">
+            <div class="swiper-slide services-container__card diagnostics">
+              <div class="services-container-card__bg img-diagnostics"></div>
+              <div class="services-container-card__text">
+                <h2 class="services-card-text__heading">Diagnostics</h2>
+                <p class="services-card-text__desc">Synth brooklyn viral tofu, chicharrones master cleanse truffaut pickled</p>
+              </div>
+            </div>
+            <div class="swiper-slide services-container__card diagnostics">
+              <div class="services-container-card__bg img-speedup"></div>
+              <div class="services-container-card__text">
+                <h2 class="services-card-text__heading">Speed Up</h2>
+                <p class="services-card-text__desc">Synth brooklyn viral tofu, chicharrones master cleanse truffaut pickled</p>
+              </div>
+            </div>
+            <div class="swiper-slide services-container__card diagnostics">
+              <div class="services-container-card__bg img-diagnostics"></div>
+              <div class="services-container-card__text">
+                <h2 class="services-card-text__heading">Diagnostics</h2>
+                <p class="services-card-text__desc">Synth brooklyn viral tofu, chicharrones master cleanse truffaut pickled</p>
+              </div>
+            </div>
+            <div class="swiper-slide services-container__card diagnostics">
+              <div class="services-container-card__bg img-speedup"></div>
+              <div class="services-container-card__text">
+                <h2 class="services-card-text__heading">Speed Up</h2>
+                <p class="services-card-text__desc">Synth brooklyn viral tofu, chicharrones master cleanse truffaut pickled</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    </script>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'services-pch',
+      ready: function() {
+        console.log('ready')
+        var flkty = new Flickity( this.$.container, {
+          // options
+          cellAlign: 'right',
+          contain: true,
+        });
+      }
+    });
+  </script>
+</dom-module>

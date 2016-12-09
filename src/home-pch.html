@@ -1,17 +1,16 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="./services-pch.html">
+<!-- <link rel="import" href="./fltest-phc.html"> -->
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="home-pch">
   <template>
     <style include="shared-styles">
-      :host {
-        display: block;
-
-        padding: 10px;
-      }
+      
     </style>
 
     <div class="card">
+      <services-pch id="servicesComponent"></services-pch>
       <div class="circle">1</div>
       <h1>View One home</h1>
       <p>Ut labores minimum atomorum pro. Laudem tibique ut has.
