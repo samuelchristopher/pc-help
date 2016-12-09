@@ -101,7 +101,7 @@
       right: 0;
       bottom: 0;
       background: #c82e46;
-
+      z-index: 99;
       pointer-events: none;
     }
 
@@ -149,6 +149,7 @@
     .nav-link:hover {
       transform: scale(1.1);
     }
+
     </style>
     <div class="header-container">
       <div class="header__background"></div>
@@ -189,10 +190,10 @@
         }
       },
       handleTap: function() {
-        console.log('tp',this.$)
         let navLinks = this.$.navContainer
         // let navLinks = document.querySelector('.nav-link-container')
-        console.log(navLinks)
+        document.body.classList.toggle('noscroll')
+        document.body.parentElement.classList.toggle('noscroll')
         navLinks.classList.toggle('show')
       }
     });
