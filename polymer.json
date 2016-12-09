@@ -4,18 +4,18 @@
   "fragments": [
     "src/header-pch.html",
     "src/footer-pch.html",
-    "src/services-pch.html",
-    "src/contact-pch.html",
-    "src/projects-pch.html",
-    "src/my-view404.html"
+    "src/home-pch.html"
   ],
   "sourceGlobs": [
    "src/**/*",
    "images/**/*",
-   "bower.json"
+   "bower.json",
+   "images/assets/**"
   ],
   "includeDependencies": [
     "manifest.json",
-    "bower_components/webcomponentsjs/webcomponents-lite.min.js"
+    "bower_components/webcomponentsjs/webcomponents-lite.min.js",
+    "https://fonts.googleapis.com/css?family=Karla:400,700",
+    "https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"
   ]
 }
